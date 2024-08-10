@@ -1,0 +1,101 @@
+#wpml-chat-icon {
+    position: fixed;    
+    right: 55px;    
+    bottom: 55px;
+    transform: scale(3);
+    transform-origin: center; /* keeps the rotation centered */
+    rect {
+        fill: aqua;
+    }
+}
+
+@keyframes wobble {
+    0%, 100% { transform: scale(3) rotate(-5deg); }
+    50% { transform: scale(3) rotate(5deg); }
+} 
+  
+#wpml-chat-icon:hover {   
+    animation: wobble 0.5s ease-in-out infinite;    
+}
+
+#wpml-chat-form {
+    border: 2px solid black;      
+}
+
+/* #wpml-chat-icon > svg path { 
+    fill: #000; 
+}*/
+
+#chatgpt-responses > div:nth-child(2) {
+    height: 480px;
+}
+
+#chatgpt-responses {
+    position: fixed;
+    right: 50px;
+    bottom: 270px;
+    border: 2px solid #74C0FC;
+    border-radius: 40px 40px 0 0;
+    background-color: aqua;
+    height: 480px;
+    width: 360px;
+    padding: 20px;
+    overflow-y: auto;   
+}
+
+.message-footer {
+    position: relative;
+    bottom: 140px;
+    right: 50px;    
+}
+
+#chatgpt-message {
+    position: fixed;
+    right: 50px;
+    bottom: 140px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #74C0FC;    
+    font-size: 14px;
+    resize: none;
+    height: 100px;
+    width: 360px;
+}
+
+#chatgpt-message:focus-visible {
+    outline: none;    
+}
+
+#chatgpt-submit {  
+    position: fixed; 
+    right: 50px;
+    bottom: 111px;    
+    padding: 10px; 
+    width: 360px;
+    color: white;
+    cursor: pointer;    
+    border-left: 2px solid #74C0FC;
+    border-right: 2px solid #74C0FC;  
+    border-bottom: 2px solid #74C0FC; 
+    border-radius: 0 0 40px 40px; 
+}
+
+.api-type {
+    position: fixed;
+    right: 50px;
+    bottom: 250px;
+    width: 360px;
+    height: 20px;
+    color: grey;
+    border-left: 2px solid #74C0FC;
+    border-right: 2px solid #74C0FC;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.26);
+}
+
+[contenteditable] ~ grammarly-extension,
+input ~ grammarly-extension,
+textarea ~ grammarly-extension {
+  display: none;
+}
